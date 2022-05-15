@@ -10,12 +10,11 @@ So the schema is something like this:
 
 ### Serial communication
 In order to achieve a good serial communication (even though not a reliable one) it was necessary to introduce a little serial protocol which ensures the exchange of every format in burst of 0xFFFF bytes (given the peripheral buffer is large enough). 
-
+```
    +------+------------+--- -- -- -- -- ---+------+
    | INIT |     LEN    |       MESSAGE     | EXIT |
    +------+------------+--- -- -- -- -- ---+------+
-
-
+```
 Where INIT and EXIT are particular bytes which denote the start and the end of the message:
 ```
 INIT -> 255 (0xFF)
