@@ -5,7 +5,7 @@ Since the ATMega 32U4 is not enough powerfull to handle an MQTT client, an HTTP 
 
 So the schema is something like this:
 
-                  WLAN               serial               wires
+            WLAN               serial               wires
  	Server <--------> Atheros <----------> ATMega <----------> Hardware
 
 ### Serial communication
