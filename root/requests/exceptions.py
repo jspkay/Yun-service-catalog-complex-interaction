@@ -15,6 +15,13 @@ class RequestException(IOError):
             self.request = self.response.request
         super(RequestException, self).__init__(*args, **kwargs)
 
+class WrongMethod(RequestException):
+    def __init__(self, m):
+        """No method such {} exist for http requests""".format(m)
+        s = """No method such "{}" exist for http requests""".format(m)
+        super(RequestException, self).__init__(s)
+        print(s)
+
 class HTTPError(RequestException):
     """An HTTP error occurred."""
 
