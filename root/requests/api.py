@@ -25,7 +25,6 @@ def get(url, params=None, **kwargs):
     return request('get', url, params=params, **kwargs)
 
 def post(url, data=None, **kwargs):
-    print(kwargs)
     return request('post', url, data=data, **kwargs)
 
 def put(url, data=None, **kwargs):
